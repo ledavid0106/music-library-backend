@@ -1,7 +1,8 @@
 import React from "react";
+import EditButton from "../EditButton/EditButton";
 
 
-const TableEntries = ({song}) => {
+const TableEntries = ({song, songs, setSongs, i}) => {
     return ( 
         <>
         <td>{song.title}</td>
@@ -9,6 +10,7 @@ const TableEntries = ({song}) => {
         <td>{song.artist}</td>
         <td>{song.genre}</td>
         <td>{song.release_date}</td>
+        <td><EditButton song={song} songs={songs} setSongs={setSongs} i={i}/></td>
         </>
      );
 }
