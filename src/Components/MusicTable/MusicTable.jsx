@@ -2,12 +2,11 @@ import TableEntries from "../TableEntries/TableEntries";
 
 
 
-const MusicTable = (songs) => {
+const MusicTable = ({songs}) => {
     return ( 
         <table>
             <thead>
                 <tr>
-                    <th>Song Number</th>
                     <th>Title</th>
                     <th>Album</th>
                     <th>Artist</th>
@@ -16,7 +15,7 @@ const MusicTable = (songs) => {
                 </tr>
             </thead>
             <tbody>
-                {songs.songs.map((song)=> {
+                {songs.map((song)=> {
                     return (
                     <tr>
                         <TableEntries song={song} songs={songs}/>
