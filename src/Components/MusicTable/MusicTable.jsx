@@ -1,8 +1,9 @@
+import NewSong from "../NewSong/NewSong2";
 import TableEntries from "../TableEntries/TableEntries";
 
 
 
-const MusicTable = ({songs}) => {
+const MusicTable = ({songs,getAllSongs}) => {
     return ( 
         <table>
             <thead>
@@ -12,6 +13,7 @@ const MusicTable = ({songs}) => {
                     <th>Artist</th>
                     <th>Genre</th>
                     <th>Release Date</th>
+                    <th><NewSong getAllSongs={getAllSongs}/></th>
                 </tr>
             </thead>
             <tbody>

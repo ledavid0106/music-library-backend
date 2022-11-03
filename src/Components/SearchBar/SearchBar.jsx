@@ -56,6 +56,7 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
     const searchAll = () => {
         let results = songs.filter((song) => {return song.title.toLowerCase().includes(search.toLowerCase()) ||
             song.artist.toLowerCase().includes(search.toLowerCase())|| 
+            song.release_date == (search) ||
             song.album.toLowerCase().includes(search.toLowerCase())|| 
             song.genre.toLowerCase().includes(search.toLowerCase())});
         setSongs(results);
