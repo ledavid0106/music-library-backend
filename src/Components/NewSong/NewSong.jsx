@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
 
-
-
-
-const NewSong = (props) => {
+const NewSong = (song) => {
 
     const [title, setTitle] = useState("")
     const [album, setAlbum] = useState("")
@@ -22,7 +19,7 @@ const NewSong = (props) => {
             date: date,
         }
         console.log(newEntry)
-        props.addNewSongProperty(newEntry)
+        song.addNewSongProperty(newEntry)
     }
 
 
