@@ -5,16 +5,16 @@ import NewSong from './Components/NewSong/NewSong';
 
 function App() {
 
-  const [entries, setEntries] = useState([{title: 'Starbright', artist: 'Dabin'}])
+  const [songs, setSongs] = useState([{title: 'Starbright', artist: 'Dabin'}])
 
-  function addNewSong(entry){
-    let tempSong = [...entries, entry]
-    setEntries(tempSong)
+  function addNewSong(song){
+    let tempSong = [...songs, song]
+    setSongs(tempSong)
   }
 
   return (
     <div className="App">
-      <MusicTable parentEntries={entries}/>
+      <MusicTable songs={songs} setSongs={setSongs}/>
       <NewSong addNewSongProperty={addNewSong}/>
     </div>
   );

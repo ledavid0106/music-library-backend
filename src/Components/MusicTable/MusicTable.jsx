@@ -1,7 +1,8 @@
+import TableEntries from "../TableEntries/TableEntries";
 
 
 
-const MusicTable = (props) => {
+const MusicTable = (songs) => {
     return ( 
         <table>
             <thead>
@@ -15,15 +16,10 @@ const MusicTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {props.parentEntries.map((entry, index)=> {
+                {songs.songs.map((song)=> {
                     return (
                     <tr>
-                        <td>{index + 1 }</td>
-                        <td>{entry.title}</td>
-                        <td>{entry.album}</td>
-                        <td>{entry.artist}</td>
-                        <td>{entry.genre}</td>
-                        <td>{entry.date}</td>
+                        <TableEntries song={song} songs={songs}/>
                     </tr>
                     )})}
             </tbody>
