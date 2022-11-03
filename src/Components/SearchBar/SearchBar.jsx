@@ -22,6 +22,9 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
             case 'Genre' :
                 searchGenre();
                 return;
+            case 'Date':
+                searchDate();
+                return;
             default:
                 searchAll();
                 return;
@@ -44,10 +47,15 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
         let results = songs.filter((song) => {return song.title.toLowerCase().includes(search.toLowerCase())});
         setSongs(results);
     }
+    const searchDate = () => {
+
+        let results = songs.filter((song)=> {return song.release_date == (search)})
+        setSongs(results);
+    }
 
     const searchAll = () => {
         let results = songs.filter((song) => {return song.title.toLowerCase().includes(search.toLowerCase()) ||
-            song.artist.toLowerCase().includes(search.toLowerCase()) || 
+            song.artist.toLowerCase().includes(search.toLowerCase())|| 
             song.album.toLowerCase().includes(search.toLowerCase())|| 
             song.genre.toLowerCase().includes(search.toLowerCase())});
         setSongs(results);
@@ -66,7 +74,7 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
             <div>Search Category</div>
             <DropdownList
                 value = {criteria}
-                data={["All", "Title", "Artist", "Album",'Genre']}
+                data={["All", "Title", "Artist", "Album",'Genre', 'Date']}
                 onChange = {criteria => setCriteria(criteria)}
             />
             </div>
