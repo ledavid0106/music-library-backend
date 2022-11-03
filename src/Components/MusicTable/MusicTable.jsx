@@ -20,7 +20,10 @@ const MusicTable = (props) => {
                     <tr>
                         <td>{index + 1 }</td>
                         <td>{entry.title}</td>
+                        <td>{entry.album}</td>
                         <td>{entry.artist}</td>
+                        <td>{entry.genre}</td>
+                        <td>{entry.date}</td>
                     </tr>
                     )})}
             </tbody>
