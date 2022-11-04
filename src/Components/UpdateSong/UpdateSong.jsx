@@ -29,7 +29,7 @@ const UpdateSong = ({updateSong, song, songs, setSongs}) => {
     }
     return ( 
         <>
-            <button onClick = {handleShow}>Update</button>
+            <button onClick = {handleShow} className="btn btn-light">Update</button>
             <Modal show = {show} onHide = {handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Enter Song Information</Modal.Title>
@@ -59,8 +59,8 @@ const UpdateSong = ({updateSong, song, songs, setSongs}) => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <button varriant = 'secondary' onClick ={handleClose}>Cancel</button>
-                    <button type = 'submit' varriant = 'primary' onClick = {handleSubmit}>Update Song</button>
+                    <button varriant = 'secondary' onClick ={handleClose} className="btn btn-dark">Cancel</button>
+                    <button type = 'submit' varriant = 'primary' onClick = {handleSubmit} className="btn btn-dark">Update Song</button>
                 </Modal.Footer>
             </Modal>
         </>

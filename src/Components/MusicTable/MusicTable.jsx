@@ -1,12 +1,12 @@
 import NewSong from "../NewSong/NewSong2";
 import TableEntries from "../TableEntries/TableEntries";
-
+import './MusicTable.css'
 
 
 const MusicTable = ({songs,getAllSongs}) => {
     return ( 
         <table className="table table-dark table-striped table-bordered table-hover ">
-            <thead className="table thead-light">
+            <thead className="table thead-dark">
                 <tr>
                     <th>Title</th>
                     <th>Album</th>

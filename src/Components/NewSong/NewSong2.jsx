@@ -30,7 +30,7 @@ const NewSong = ({getAllSongs}) => {
 
     return (
         <>
-            <button onClick = {handleShow}>Add Song</button>   
+            <button type="button" onClick = {handleShow} className="btn btn-dark">Add Song</button>   
             <Modal show = {show} onHide = {handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Enter Song Information</Modal.Title>

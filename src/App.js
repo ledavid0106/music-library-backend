@@ -4,6 +4,7 @@ import MusicTable from './Components/MusicTable/MusicTable';
 import SearchBar from './Components/SearchBar/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/NavBar/NavBar';
+import "./App.css"
 
 function App() {
 
@@ -24,8 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <SearchBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
+      <NavBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
       <MusicTable songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
     </div>
   );

@@ -40,7 +40,7 @@ const EditButton = ({song, setSongs, songs, i, getAllSongs}) => {
     return ( 
         <div>
             <UpdateSong updateSong = {updateSong} song = {song} setSongs = {setSongs} songs = {songs}/>
-            <button onClick = {handleShow}>Delete</button>
+            <button onClick = {handleShow} className="btn btn-light">Delete</button>
             <Modal show = {show} onHide = {handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Deleting Song</Modal.Title>
@@ -49,8 +49,8 @@ const EditButton = ({song, setSongs, songs, i, getAllSongs}) => {
                    Are you sure you want to delete [{song.title}]?
                 </Modal.Body>
                 <Modal.Footer>
-                    <button varriant = 'secondary' onClick ={handleClose}>Cancel</button>
-                    <button type = 'submit' varriant = 'primary' onClick = {deleteClick}>Delete Song</button>
+                    <button varriant = 'secondary' onClick ={handleClose} className="btn btn-dark">Cancel</button>
+                    <button type = 'submit' varriant = 'primary' onClick = {deleteClick} className="btn btn-dark">Delete Song</button>
                     
                 </Modal.Footer>
             </Modal>
