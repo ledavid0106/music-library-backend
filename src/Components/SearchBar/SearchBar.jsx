@@ -73,13 +73,17 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
                 onChange = {criteria => setCriteria(criteria)}
             />
             </div>
-            <Form onSubmit = {handleSubmit}>
+            <div>
+            <Form onSubmit = {handleSubmit} className='sides'>
                 <Form.Group>
                     <Form.Control  placeholder = 'Looking for a song?' type = 'string' value = {search} onChange = {(event)=> setSearch(event.target.value)}/>
                 </Form.Group>
+                <div >
                 <button type = 'submit' className="btn btn-dark">Search</button>
                 <button onClick = {getAllSongs} className="btn btn-dark">New Search</button>
+                </div>
             </Form>
+            </div>
         </div>
      );
 }

@@ -3,8 +3,8 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const NavBar = ({songs, setSongs, getAllSongs}) => {
     return ( 
-        <nav className="navbar navbar-expand-lg navbar-dark bg-info">
-        <h3  >EDM <small className="text-muted">Bangers</small></h3> |
+        <nav className="navbar navbar-dark bg-info">
+        <h1  >EDM <small className="text-muted">Bangers</small></h1> |
         <SearchBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
       </nav>
     )
