@@ -60,8 +60,8 @@ const NewSong = ({getAllSongs}) => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <button varriant = 'secondary' onClick ={handleClose}>Cancel</button>
-                    <button type = 'submit' varriant = 'primary' onClick = {handleSubmit}>Add Song</button>
+                    <button varriant = 'secondary' onClick ={handleClose} className="btn btn-dark">Cancel</button>
+                    <button type = 'submit' varriant = 'primary' onClick = {handleSubmit} className="btn btn-dark">Add Song</button>
                 </Modal.Footer>
             </Modal>
         </>
