@@ -5,8 +5,8 @@ import TableEntries from "../TableEntries/TableEntries";
 
 const MusicTable = ({songs,getAllSongs}) => {
     return ( 
-        <table>
-            <thead>
+        <table className="table table-dark table-striped table-bordered table-hover ">
+            <thead className="table thead-light">
                 <tr>
                     <th>Title</th>
                     <th>Album</th>
@@ -20,7 +20,7 @@ const MusicTable = ({songs,getAllSongs}) => {
                 {songs.map((song)=> {
                     return (
                     <tr>
-                        <TableEntries song={song} songs={songs}/>
+                        <TableEntries song={song} songs={songs} getAllSongs={getAllSongs}/>
                     </tr>
                     )})}
             </tbody>

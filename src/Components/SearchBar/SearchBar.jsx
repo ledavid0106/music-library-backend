@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Form} from 'react-bootstrap';
 import DropdownList from "react-widgets/DropdownList";
+import './SearchBar.css'
 
 const SearchBar = ({songs, setSongs, getAllSongs}) => {
     const [search,setSearch] = useState('');
@@ -63,14 +64,7 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
     }
 
     return ( 
-        <div>
-            <Form onSubmit = {handleSubmit}>
-                <Form.Group>
-                    <Form.Control  placeholder = 'Looking for a song?' type = 'string' value = {search} onChange = {(event)=> setSearch(event.target.value)}/>
-                </Form.Group>
-                <button type = 'submit'>Search</button>
-                <button onClick = {getAllSongs}>New Search</button>
-            </Form>
+        <div className='pls'>
             <div>
             <div>Search Category</div>
             <DropdownList
@@ -79,6 +73,13 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
                 onChange = {criteria => setCriteria(criteria)}
             />
             </div>
+            <Form onSubmit = {handleSubmit}>
+                <Form.Group>
+                    <Form.Control  placeholder = 'Looking for a song?' type = 'string' value = {search} onChange = {(event)=> setSearch(event.target.value)}/>
+                </Form.Group>
+                <button type = 'submit' className="btn btn-outline-primary">Search</button>
+                <button onClick = {getAllSongs} className="btn btn-outline-primary">New Search</button>
+            </Form>
         </div>
      );
 }

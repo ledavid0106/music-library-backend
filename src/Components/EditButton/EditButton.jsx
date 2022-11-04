@@ -3,7 +3,8 @@ import UpdateSong from "../UpdateSong/UpdateSong";
 import { Modal } from 'react-bootstrap';
 import React, {useState } from 'react';
 
-const EditButton = ({song, setSongs, songs, i}) => {
+
+const EditButton = ({song, setSongs, songs, i, getAllSongs}) => {
     const [show,setShow] = useState(false);
     const handleShow = () =>setShow(true);
     const handleClose = () =>setShow(false);
@@ -19,9 +20,10 @@ const EditButton = ({song, setSongs, songs, i}) => {
         const response = await axios.delete(pinpoint)
         if (response.status === 204) {
             songs.splice(i,1)
-            window.location.reload()
-            const tempsongs = [...songs];
-            setSongs(tempsongs);
+            // const tempsongs = [...songs];
+            // setSongs(tempsongs)
+            await getAllSongs()
+            
         } 
     }
     async function updateSong(updatedSong){

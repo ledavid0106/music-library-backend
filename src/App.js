@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MusicTable from './Components/MusicTable/MusicTable';
 import SearchBar from './Components/SearchBar/SearchBar';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      <MusicTable songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
+      <NavBar/>
       <SearchBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
+      <MusicTable songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
     </div>
   );
 }
