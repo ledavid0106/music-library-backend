@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Form} from 'react-bootstrap';
-import DropdownList from "react-widgets/DropdownList";
+import { Combobox } from 'react-widgets';
+// import DropdownList from "react-widgets/DropdownList";
 import './SearchBar.css'
 
 const SearchBar = ({songs, setSongs, getAllSongs}) => {
@@ -67,12 +68,12 @@ const SearchBar = ({songs, setSongs, getAllSongs}) => {
         <div className='pls'>
             <div>
             <div>Search Category</div>
-            <DropdownList
+            </div>
+            <Combobox
                 value = {criteria}
                 data={["All", "Title", "Artist", "Album",'Genre', 'Date']}
                 onChange = {criteria => setCriteria(criteria)}
             />
-            </div>
             <div>
             <Form onSubmit = {handleSubmit} className='sides'>
                 <Form.Group>
